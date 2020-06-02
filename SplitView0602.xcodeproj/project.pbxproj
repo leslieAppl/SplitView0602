@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		CE80AE2D2486216C00BE7011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE2C2486216C00BE7011 /* AppDelegate.swift */; };
 		CE80AE2F2486216C00BE7011 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE2E2486216C00BE7011 /* SceneDelegate.swift */; };
-		CE80AE312486216C00BE7011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE302486216C00BE7011 /* ViewController.swift */; };
 		CE80AE342486216C00BE7011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE80AE322486216C00BE7011 /* Main.storyboard */; };
 		CE80AE362486216D00BE7011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE80AE352486216D00BE7011 /* Assets.xcassets */; };
 		CE80AE392486216D00BE7011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE80AE372486216D00BE7011 /* LaunchScreen.storyboard */; };
+		CE80AE412486221B00BE7011 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE402486221B00BE7011 /* ApplicationData.swift */; };
+		CE80AE46248628F700BE7011 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE45248628F700BE7011 /* MasterViewController.swift */; };
+		CE80AE4924862BA300BE7011 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE4824862BA300BE7011 /* DetailViewController.swift */; };
+		CE80AE4B248639CD00BE7011 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE4A248639CD00BE7011 /* EmptyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE80AE292486216C00BE7011 /* SplitView0602.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitView0602.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80AE2C2486216C00BE7011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE80AE2E2486216C00BE7011 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE80AE302486216C00BE7011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE80AE332486216C00BE7011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE80AE352486216D00BE7011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE80AE382486216D00BE7011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE80AE3A2486216D00BE7011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE80AE402486221B00BE7011 /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
+		CE80AE45248628F700BE7011 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CE80AE4824862BA300BE7011 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE80AE4A248639CD00BE7011 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		CE80AE2B2486216C00BE7011 /* SplitView0602 */ = {
 			isa = PBXGroup;
 			children = (
+				CE80AE442486289600BE7011 /* M */,
+				CE80AE432486289100BE7011 /* V */,
+				CE80AE422486288A00BE7011 /* C */,
 				CE80AE2C2486216C00BE7011 /* AppDelegate.swift */,
 				CE80AE2E2486216C00BE7011 /* SceneDelegate.swift */,
-				CE80AE302486216C00BE7011 /* ViewController.swift */,
 				CE80AE322486216C00BE7011 /* Main.storyboard */,
 				CE80AE352486216D00BE7011 /* Assets.xcassets */,
 				CE80AE372486216D00BE7011 /* LaunchScreen.storyboard */,
 				CE80AE3A2486216D00BE7011 /* Info.plist */,
 			);
 			path = SplitView0602;
+			sourceTree = "<group>";
+		};
+		CE80AE422486288A00BE7011 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				CE80AE45248628F700BE7011 /* MasterViewController.swift */,
+				CE80AE4824862BA300BE7011 /* DetailViewController.swift */,
+				CE80AE4A248639CD00BE7011 /* EmptyViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		CE80AE432486289100BE7011 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		CE80AE442486289600BE7011 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				CE80AE402486221B00BE7011 /* ApplicationData.swift */,
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE80AE312486216C00BE7011 /* ViewController.swift in Sources */,
+				CE80AE4B248639CD00BE7011 /* EmptyViewController.swift in Sources */,
+				CE80AE46248628F700BE7011 /* MasterViewController.swift in Sources */,
 				CE80AE2D2486216C00BE7011 /* AppDelegate.swift in Sources */,
+				CE80AE4924862BA300BE7011 /* DetailViewController.swift in Sources */,
+				CE80AE412486221B00BE7011 /* ApplicationData.swift in Sources */,
 				CE80AE2F2486216C00BE7011 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.SplitView0602;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.SplitView0602;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
