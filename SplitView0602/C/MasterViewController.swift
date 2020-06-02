@@ -18,6 +18,7 @@ class MasterViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        splitViewController?.delegate = self
         splitViewController?.preferredDisplayMode = .allVisible
         
     }
@@ -94,6 +95,12 @@ class MasterViewController: UITableViewController {
         }
 
     }
-    
 
+}
+
+extension MasterViewController: UISplitViewControllerDelegate {
+    //Showing the Master view instead of the Detail view when the app is launched
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
+    }
 }
