@@ -4,3 +4,6 @@
 
 ## Showing the Master view instead of the Detail view when the app is launched
 
+## Present Modally Segue and dismiss the view controller presented
+
+
