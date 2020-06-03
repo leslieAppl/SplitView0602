@@ -16,25 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-25-gas">
-                                <rect key="frame" x="20" y="108" width="374" height="374"/>
+                                <rect key="frame" x="20" y="153" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="374" id="5Jo-Xx-LO8"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veO-6g-21N">
-                                <rect key="frame" x="186" y="502" width="42" height="24"/>
+                                <rect key="frame" x="186" y="547" width="42" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhj-vu-Zfz">
-                                <rect key="frame" x="180" y="536" width="54" height="21"/>
+                                <rect key="frame" x="180" y="581" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-N8-tca">
-                                <rect key="frame" x="167" y="567" width="80" height="50"/>
+                                <rect key="frame" x="167" y="612" width="80" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="dL4-jf-C65"/>
                                     <constraint firstAttribute="height" constant="50" id="eah-mu-54f"/>
@@ -45,18 +45,28 @@
                                     <segue destination="sD6-dy-bpb" kind="presentation" identifier="showPicture" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="dDb-Ms-2cC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45M-bg-Qyq">
+                                <rect key="frame" x="357" y="104" width="37" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="helpBtnPressed:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="y0o-db-bhZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dmR-9J-f5E" firstAttribute="trailing" secondItem="irJ-25-gas" secondAttribute="trailing" constant="20" id="3FU-Gi-Xtt"/>
                             <constraint firstItem="xhj-vu-Zfz" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="LOs-3c-R85"/>
-                            <constraint firstItem="irJ-25-gas" firstAttribute="top" secondItem="dmR-9J-f5E" secondAttribute="top" constant="20" id="Ns1-SB-PjC"/>
+                            <constraint firstItem="dmR-9J-f5E" firstAttribute="trailing" secondItem="45M-bg-Qyq" secondAttribute="trailing" constant="20" id="MLs-8e-w4H"/>
                             <constraint firstItem="qrQ-N8-tca" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="P82-4W-Pd1"/>
+                            <constraint firstItem="irJ-25-gas" firstAttribute="top" secondItem="45M-bg-Qyq" secondAttribute="bottom" constant="16" id="Rhb-v3-QGG"/>
                             <constraint firstItem="irJ-25-gas" firstAttribute="leading" secondItem="dmR-9J-f5E" secondAttribute="leading" constant="20" id="VjS-1L-5KV"/>
                             <constraint firstItem="xhj-vu-Zfz" firstAttribute="top" secondItem="veO-6g-21N" secondAttribute="bottom" constant="10" id="Wkl-Ua-iiq"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="top" secondItem="irJ-25-gas" secondAttribute="bottom" constant="20" id="aQd-5h-qed"/>
                             <constraint firstItem="qrQ-N8-tca" firstAttribute="top" secondItem="xhj-vu-Zfz" secondAttribute="bottom" constant="10" id="hIr-34-qmx"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="k63-o7-hPw"/>
+                            <constraint firstItem="45M-bg-Qyq" firstAttribute="top" secondItem="dmR-9J-f5E" secondAttribute="top" constant="16" id="oYP-gE-vcF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dmR-9J-f5E"/>
                     </view>

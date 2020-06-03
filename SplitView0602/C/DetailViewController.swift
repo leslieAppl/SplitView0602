@@ -34,7 +34,10 @@ class DetailViewController: UIViewController {
         }
     }
     
-
+    @IBAction func helpBtnPressed(_ sender: UIButton) {
+        
+    }
+    
     
     // MARK: - Navigation
 
