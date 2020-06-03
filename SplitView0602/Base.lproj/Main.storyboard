@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Help"/>
                                 <connections>
-                                    <action selector="helpBtnPressed:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="y0o-db-bhZ"/>
+                                    <action selector="showHelp:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="y0o-db-bhZ"/>
                                 </connections>
                             </button>
                         </subviews>

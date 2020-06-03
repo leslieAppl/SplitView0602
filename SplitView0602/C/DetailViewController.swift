@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     }
     
     //Creating Modal Views entirely from code
-    @IBAction func helpBtnPressed(_ sender: UIButton) {
+    @IBAction func showHelp(_ sender: UIButton) {
         let label = UILabel(frame: CGRect.zero) //the frame start from origin x,y(0,0).
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Press Expand to maximize the cover"
