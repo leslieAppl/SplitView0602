@@ -46,11 +46,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45M-bg-Qyq">
-                                <rect key="frame" x="357" y="104" width="37" height="33"/>
+                                <rect key="frame" x="345" y="104" width="49" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="Help 1"/>
                                 <connections>
                                     <action selector="showHelp:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="y0o-db-bhZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-UC-Bvg">
+                                <rect key="frame" x="274" y="104" width="51" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Help 2"/>
+                                <connections>
+                                    <action selector="showHelp2:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="AhJ-f1-rqk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUd-yk-IOY">
+                                <rect key="frame" x="202" y="104" width="52" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Help 3"/>
+                                <connections>
+                                    <action selector="showHelp3:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="oQi-6Y-jfM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,9 +80,13 @@
                             <constraint firstItem="irJ-25-gas" firstAttribute="leading" secondItem="dmR-9J-f5E" secondAttribute="leading" constant="20" id="VjS-1L-5KV"/>
                             <constraint firstItem="xhj-vu-Zfz" firstAttribute="top" secondItem="veO-6g-21N" secondAttribute="bottom" constant="10" id="Wkl-Ua-iiq"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="top" secondItem="irJ-25-gas" secondAttribute="bottom" constant="20" id="aQd-5h-qed"/>
+                            <constraint firstItem="dUd-yk-IOY" firstAttribute="centerY" secondItem="OE9-UC-Bvg" secondAttribute="centerY" id="fm1-Ol-Fh8"/>
                             <constraint firstItem="qrQ-N8-tca" firstAttribute="top" secondItem="xhj-vu-Zfz" secondAttribute="bottom" constant="10" id="hIr-34-qmx"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="k63-o7-hPw"/>
                             <constraint firstItem="45M-bg-Qyq" firstAttribute="top" secondItem="dmR-9J-f5E" secondAttribute="top" constant="16" id="oYP-gE-vcF"/>
+                            <constraint firstItem="45M-bg-Qyq" firstAttribute="leading" secondItem="OE9-UC-Bvg" secondAttribute="trailing" constant="20" id="sTl-h9-RI1"/>
+                            <constraint firstItem="OE9-UC-Bvg" firstAttribute="leading" secondItem="dUd-yk-IOY" secondAttribute="trailing" constant="20" id="sl5-3K-sxh"/>
+                            <constraint firstItem="OE9-UC-Bvg" firstAttribute="centerY" secondItem="45M-bg-Qyq" secondAttribute="centerY" id="vnc-dS-hh6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dmR-9J-f5E"/>
                     </view>
@@ -219,6 +239,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNa-hU-WaW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1635" y="171"/>
+        </scene>
+        <!--Single View Controller-->
+        <scene sceneID="h45-aQ-m9Y">
+            <objects>
+                <viewController storyboardIdentifier="helpView" id="9TY-OZ-kai" customClass="SingleViewController" customModule="SplitView0602" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="Iaw-UT-h2x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Expand to maximiaze the cover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUI-Ql-qQg">
+                                <rect key="frame" x="20" y="64" width="374" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="090-27-92V">
+                                <rect key="frame" x="40" y="148.5" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelp:" destination="9TY-OZ-kai" eventType="touchUpInside" id="CWb-0K-VZ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="090-27-92V" firstAttribute="leading" secondItem="foD-Lk-VTX" secondAttribute="leading" constant="40" id="TeX-UP-rdB"/>
+                            <constraint firstItem="nUI-Ql-qQg" firstAttribute="top" secondItem="foD-Lk-VTX" secondAttribute="top" constant="20" id="ihQ-nS-gtd"/>
+                            <constraint firstAttribute="trailing" secondItem="nUI-Ql-qQg" secondAttribute="trailing" constant="20" id="jh0-h4-owE"/>
+                            <constraint firstItem="090-27-92V" firstAttribute="top" secondItem="nUI-Ql-qQg" secondAttribute="bottom" constant="20" id="pxw-jw-0ou"/>
+                            <constraint firstItem="nUI-Ql-qQg" firstAttribute="leading" secondItem="foD-Lk-VTX" secondAttribute="leading" constant="20" id="yNi-Bh-dGH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="foD-Lk-VTX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci6-SP-T4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3111" y="180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TFa-A1-DnW">

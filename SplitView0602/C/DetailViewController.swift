@@ -35,8 +35,27 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //Creating Modal Views from Single View Controller initiated with UIStoryboard ID
+    @IBAction func showHelp3(_ sender: UIButton) {
+        //To provide access to the UIStoryboard object,
+        //the UIViewController class offers the storyboard property.
+        if let story = storyboard {
+            let helpController3 = story.instantiateViewController(identifier: "helpView") as! SingleViewController
+            helpController3.modalPresentationStyle = .formSheet
+            present(helpController3, animated: true, completion: nil)
+        }
+    }
+    
+    //Creating Modal Views from XIB File
+    @IBAction func showHelp2(_ sender: UIButton) {
+        let helpController2 = HelpController()
+        helpController2.modalPresentationStyle = .pageSheet
+        present(helpController2, animated: true, completion: nil)
+    }
+    
     //Creating Modal Views entirely from code
     @IBAction func showHelp(_ sender: UIButton) {
+        //Get modal view readay
         let label = UILabel(frame: CGRect.zero) //the frame start from origin x,y(0,0).
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Press Expand to maximize the cover"
@@ -52,7 +71,7 @@ class DetailViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(self.closeHelp), for: .touchUpInside)
         
         controllerHelp = UIViewController()
-        controllerHelp.modalPresentationStyle = .pageSheet
+        controllerHelp.modalPresentationStyle = .overFullScreen
         controllerHelp.view.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 0.3)
         controllerHelp.view.addSubview(label)
         controllerHelp.view.addSubview(closeButton)
@@ -62,16 +81,19 @@ class DetailViewController: UIViewController {
         label.leadingAnchor.constraint(equalTo: cView.leadingAnchor, constant: 16).isActive = true
         label.trailingAnchor.constraint(equalTo: cView.trailingAnchor, constant: -16).isActive = true
         
-        closeButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 8).isActive = true
+        closeButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20).isActive = true
         closeButton.leadingAnchor.constraint(equalTo: cView.leadingAnchor, constant: 16).isActive = true
         closeButton.trailingAnchor.constraint(equalTo: cView.trailingAnchor, constant: -16).isActive = true
         
+        //Present modal view
         present(controllerHelp, animated: true, completion: nil)
     }
     
     @objc func closeHelp() {
         controllerHelp.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     // MARK: - Navigation
 
