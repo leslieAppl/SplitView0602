@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UISplitViewControllerDelegate {
     
     var selected: Int!
     var controllerHelp: UIViewController!
@@ -42,6 +42,10 @@ class DetailViewController: UIViewController {
         if let story = storyboard {
             let helpController3 = story.instantiateViewController(identifier: "helpView") as! SingleViewController
             helpController3.modalPresentationStyle = .formSheet
+            
+            let presentation = helpController3.presentationController
+            presentation?.delegate = self
+            
             present(helpController3, animated: true, completion: nil)
         }
     }
@@ -107,6 +111,23 @@ class DetailViewController: UIViewController {
         }
 
     }
-    
-
 }
+
+extension DetailViewController: UIAdaptivePresentationControllerDelegate {
+    //Showing an alternative modal view
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .overFullScreen
+    }
+    
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        var controller: iPhoneViewController!
+        if style == .overFullScreen {
+            if let story = storyboard {
+                controller = story.instantiateViewController(identifier: "iPhoneView") as? iPhoneViewController
+                return controller
+            }
+        }
+        return nil
+    }
+}
+

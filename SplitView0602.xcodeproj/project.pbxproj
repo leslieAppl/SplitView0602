@@ -11,6 +11,7 @@
 		CE5F637B24877D69000802C6 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F637924877D69000802C6 /* HelpController.swift */; };
 		CE5F637C24877D69000802C6 /* HelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5F637A24877D69000802C6 /* HelpController.xib */; };
 		CE5F637E248786EE000802C6 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F637D248786EE000802C6 /* SingleViewController.swift */; };
+		CE5F6380248897B2000802C6 /* iPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F637F248897B2000802C6 /* iPhoneViewController.swift */; };
 		CE80AE2D2486216C00BE7011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE2C2486216C00BE7011 /* AppDelegate.swift */; };
 		CE80AE2F2486216C00BE7011 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80AE2E2486216C00BE7011 /* SceneDelegate.swift */; };
 		CE80AE342486216C00BE7011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE80AE322486216C00BE7011 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		CE5F637924877D69000802C6 /* HelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
 		CE5F637A24877D69000802C6 /* HelpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpController.xib; sourceTree = "<group>"; };
 		CE5F637D248786EE000802C6 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
+		CE5F637F248897B2000802C6 /* iPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneViewController.swift; sourceTree = "<group>"; };
 		CE80AE292486216C00BE7011 /* SplitView0602.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitView0602.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80AE2C2486216C00BE7011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE80AE2E2486216C00BE7011 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				CE5F637924877D69000802C6 /* HelpController.swift */,
 				CE5F637A24877D69000802C6 /* HelpController.xib */,
 				CE5F637D248786EE000802C6 /* SingleViewController.swift */,
+				CE5F637F248897B2000802C6 /* iPhoneViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				CE80AE4924862BA300BE7011 /* DetailViewController.swift in Sources */,
 				CE3E4D6F2486A66C008A2DC0 /* PictureViewController.swift in Sources */,
 				CE80AE412486221B00BE7011 /* ApplicationData.swift in Sources */,
+				CE5F6380248897B2000802C6 /* iPhoneViewController.swift in Sources */,
 				CE80AE2F2486216C00BE7011 /* SceneDelegate.swift in Sources */,
 				CE5F637B24877D69000802C6 /* HelpController.swift in Sources */,
 			);

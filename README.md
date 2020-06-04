@@ -30,4 +30,37 @@
                 }
             }
 
+## Showing an alternative modal view
+        @IBAction func showHelp3(_ sender: UIButton) {
+            //To provide access to the UIStoryboard object,
+            //the UIViewController class offers the storyboard property.
+            if let story = storyboard {
+                let helpController3 = story.instantiateViewController(identifier: "helpView") as! SingleViewController
+                helpController3.modalPresentationStyle = .formSheet
+                
+                let presentation = helpController3.presentationController
+                presentation?.delegate = self
+                
+                present(helpController3, animated: true, completion: nil)
+            }
+        }
+
+        extension DetailViewController: UIAdaptivePresentationControllerDelegate {
+            //Showing an alternative modal view
+            func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+                return .overFullScreen
+            }
+            
+            func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+                var controller: iPhoneViewController!
+                if style == .overFullScreen {
+                    if let story = storyboard {
+                        controller = story.instantiateViewController(identifier: "iPhoneView") as? iPhoneViewController
+                        return controller
+                    }
+                }
+                return nil
+            }
+        }
+
 

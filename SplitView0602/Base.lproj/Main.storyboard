@@ -278,6 +278,56 @@
             </objects>
             <point key="canvasLocation" x="3111" y="180"/>
         </scene>
+        <!--iPhone View Controller-->
+        <scene sceneID="T1D-m0-1C1">
+            <objects>
+                <viewController storyboardIdentifier="iPhoneView" id="sNY-dk-qFV" customClass="iPhoneViewController" customModule="SplitView0602" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VcA-iG-pKq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Expand to maximiaze the cover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZP-bF-cJ1">
+                                <rect key="frame" x="20" y="60" width="374" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7W-TT-Qci">
+                                <rect key="frame" x="40" y="144.5" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelp:" destination="sNY-dk-qFV" eventType="touchUpInside" id="cRq-D6-fYq"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-rC-eEu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0OX-tN-m4g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dA8-rC-eEu" firstAttribute="trailing" secondItem="7oA-cP-u0e" secondAttribute="trailing" id="1KL-4d-nZa"/>
+                            <constraint firstItem="7oA-cP-u0e" firstAttribute="trailing" secondItem="aZP-bF-cJ1" secondAttribute="trailing" constant="20" id="6xc-Ia-vUC"/>
+                            <constraint firstItem="B7W-TT-Qci" firstAttribute="leading" secondItem="7oA-cP-u0e" secondAttribute="leading" constant="40" id="DDp-lk-c4X"/>
+                            <constraint firstItem="aZP-bF-cJ1" firstAttribute="top" secondItem="7oA-cP-u0e" secondAttribute="top" constant="16" id="HZz-LZ-ILu"/>
+                            <constraint firstItem="dA8-rC-eEu" firstAttribute="leading" secondItem="7oA-cP-u0e" secondAttribute="leading" id="Ind-Un-9I9"/>
+                            <constraint firstItem="dA8-rC-eEu" firstAttribute="top" secondItem="VcA-iG-pKq" secondAttribute="top" id="Uwz-ec-4ZM"/>
+                            <constraint firstItem="B7W-TT-Qci" firstAttribute="top" secondItem="aZP-bF-cJ1" secondAttribute="bottom" constant="20" id="Z86-sc-CYI"/>
+                            <constraint firstItem="aZP-bF-cJ1" firstAttribute="leading" secondItem="7oA-cP-u0e" secondAttribute="leading" constant="20" id="bv3-zR-igr"/>
+                            <constraint firstAttribute="bottom" secondItem="dA8-rC-eEu" secondAttribute="bottom" id="hiB-BA-eHp"/>
+                            <constraint firstItem="B7W-TT-Qci" firstAttribute="top" secondItem="aZP-bF-cJ1" secondAttribute="bottom" constant="20" id="ve6-J5-d3G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7oA-cP-u0e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbZ-Cu-Fev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3756.521739130435" y="178.79464285714286"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TFa-A1-DnW">
             <objects>
