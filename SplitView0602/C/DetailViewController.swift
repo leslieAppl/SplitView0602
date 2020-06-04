@@ -115,8 +115,11 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
             let presentation = controller.presentationController as! UIPopoverPresentationController
             let frame = presentation.sourceView?.bounds
             presentation.sourceRect = frame!
+            
+            //setting PopoverViewController as the delegate
+            //So, have to conform UIAdaptivePresentationControllerDelegate at PopoverViewController.swift
+            controller.presentationController?.delegate = controller
         }
-
     }
 }
 

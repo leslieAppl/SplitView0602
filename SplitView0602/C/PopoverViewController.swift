@@ -60,3 +60,9 @@ class PopoverViewController: UIViewController {
     */
 
 }
+
+extension PopoverViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+}
