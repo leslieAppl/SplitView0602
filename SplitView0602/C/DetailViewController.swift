@@ -109,6 +109,13 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
             let controller = segue.destination as! PictureViewController
             controller.selected = self.selected
         }
+        else if segue.identifier == "showPopover" {
+            let controller = segue.destination as! PopoverViewController
+            controller.selected = self.selected
+            let presentation = controller.presentationController as! UIPopoverPresentationController
+            let frame = presentation.sourceView?.bounds
+            presentation.sourceRect = frame!
+        }
 
     }
 }

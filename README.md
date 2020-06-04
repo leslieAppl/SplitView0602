@@ -63,4 +63,14 @@
             }
         }
 
+## Segue present as popover view on iPad
+        if segue.identifier == "showPopover" {
+            let controller = segue.destination as! PopoverViewController
+            let presentation = controller.presentationController as! UIPopoverPresentationController
+            let frame = presentation.sourceView?.bounds
+            presentation.sourceRect = frame!
+        }
+
+## Segue present as popover view on iPhone (a compact horizontal Size Class)
+
 

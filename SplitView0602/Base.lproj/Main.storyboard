@@ -7,6 +7,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Popover View Controller-->
+        <scene sceneID="hzd-5d-oUv">
+            <objects>
+                <viewController id="hxG-jb-vCy" customClass="PopoverViewController" customModule="SplitView0602" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7nn-4o-tiv">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAj-ch-NVg">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LAj-ch-NVg" secondAttribute="bottom" id="9a4-Wg-pEL"/>
+                            <constraint firstItem="LAj-ch-NVg" firstAttribute="top" secondItem="7nn-4o-tiv" secondAttribute="top" id="J2Q-xy-vrY"/>
+                            <constraint firstAttribute="trailing" secondItem="LAj-ch-NVg" secondAttribute="trailing" id="QTQ-Mu-Gpb"/>
+                            <constraint firstItem="LAj-ch-NVg" firstAttribute="leading" secondItem="7nn-4o-tiv" secondAttribute="leading" id="xZ6-X1-Qe4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N95-wB-h5v"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="50"/>
+                    <connections>
+                        <outlet property="messageLbl" destination="LAj-ch-NVg" id="4QK-0F-Zq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGw-Wc-Mt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032" y="-908"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="lEE-Rn-m7v">
             <objects>
@@ -34,9 +70,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-N8-tca">
-                                <rect key="frame" x="167" y="612" width="80" height="50"/>
+                                <rect key="frame" x="20" y="612" width="71" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="dL4-jf-C65"/>
                                     <constraint firstAttribute="height" constant="50" id="eah-mu-54f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -69,19 +104,34 @@
                                     <action selector="showHelp3:" destination="uGd-Hz-ZcG" eventType="touchUpInside" id="oQi-6Y-jfM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhc-70-bkF">
+                                <rect key="frame" x="285" y="612" width="109" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y5A-UD-eKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Total Books"/>
+                                <connections>
+                                    <segue destination="hxG-jb-vCy" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="lhc-70-bkF" id="6Sb-WL-jdB">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dmR-9J-f5E" firstAttribute="trailing" secondItem="irJ-25-gas" secondAttribute="trailing" constant="20" id="3FU-Gi-Xtt"/>
+                            <constraint firstItem="qrQ-N8-tca" firstAttribute="leading" secondItem="dmR-9J-f5E" secondAttribute="leading" constant="20" id="EFK-Um-COf"/>
+                            <constraint firstItem="lhc-70-bkF" firstAttribute="centerY" secondItem="qrQ-N8-tca" secondAttribute="centerY" id="Kmp-kU-twn"/>
                             <constraint firstItem="xhj-vu-Zfz" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="LOs-3c-R85"/>
                             <constraint firstItem="dmR-9J-f5E" firstAttribute="trailing" secondItem="45M-bg-Qyq" secondAttribute="trailing" constant="20" id="MLs-8e-w4H"/>
-                            <constraint firstItem="qrQ-N8-tca" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="P82-4W-Pd1"/>
                             <constraint firstItem="irJ-25-gas" firstAttribute="top" secondItem="45M-bg-Qyq" secondAttribute="bottom" constant="16" id="Rhb-v3-QGG"/>
                             <constraint firstItem="irJ-25-gas" firstAttribute="leading" secondItem="dmR-9J-f5E" secondAttribute="leading" constant="20" id="VjS-1L-5KV"/>
                             <constraint firstItem="xhj-vu-Zfz" firstAttribute="top" secondItem="veO-6g-21N" secondAttribute="bottom" constant="10" id="Wkl-Ua-iiq"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="top" secondItem="irJ-25-gas" secondAttribute="bottom" constant="20" id="aQd-5h-qed"/>
                             <constraint firstItem="dUd-yk-IOY" firstAttribute="centerY" secondItem="OE9-UC-Bvg" secondAttribute="centerY" id="fm1-Ol-Fh8"/>
                             <constraint firstItem="qrQ-N8-tca" firstAttribute="top" secondItem="xhj-vu-Zfz" secondAttribute="bottom" constant="10" id="hIr-34-qmx"/>
+                            <constraint firstItem="dmR-9J-f5E" firstAttribute="trailing" secondItem="lhc-70-bkF" secondAttribute="trailing" constant="20" id="iNs-ia-FwP"/>
                             <constraint firstItem="veO-6g-21N" firstAttribute="centerX" secondItem="Ao3-Jl-3eN" secondAttribute="centerX" id="k63-o7-hPw"/>
                             <constraint firstItem="45M-bg-Qyq" firstAttribute="top" secondItem="dmR-9J-f5E" secondAttribute="top" constant="16" id="oYP-gE-vcF"/>
                             <constraint firstItem="45M-bg-Qyq" firstAttribute="leading" secondItem="OE9-UC-Bvg" secondAttribute="trailing" constant="20" id="sTl-h9-RI1"/>
@@ -140,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPk-EE-Sge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3756.521739130435" y="-524.33035714285711"/>
+            <point key="canvasLocation" x="3807" y="-524"/>
         </scene>
         <!--Book List-->
         <scene sceneID="NnZ-q4-R0u">
