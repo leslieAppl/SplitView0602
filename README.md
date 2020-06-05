@@ -63,7 +63,7 @@
             }
         }
 
-## Segue present as popover view on iPad
+## Segue present as popover on iPad
         if segue.identifier == "showPopover" {
             let controller = segue.destination as! PopoverViewController
             let presentation = controller.presentationController as! UIPopoverPresentationController
@@ -71,7 +71,7 @@
             presentation.sourceRect = frame!
         }
 
-## Segue present as popover view on iPhone (a compact horizontal Size Class)
+## Segue present as popover on iPhone (a compact horizontal Size Class)
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showPopover" {
