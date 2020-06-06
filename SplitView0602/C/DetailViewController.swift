@@ -112,6 +112,8 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
         else if segue.identifier == "showPopover" {
             let controller = segue.destination as! PopoverViewController
             controller.selected = self.selected
+            
+            //Adjusting popover view anchor point
             let presentation = controller.presentationController as! UIPopoverPresentationController
             let frame = presentation.sourceView?.bounds
             presentation.sourceRect = frame!
